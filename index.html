@@ -2,6 +2,8 @@
 APPLICATION_NAME "My application"
 APPLICATION_DESCRIPTION "Just a useless application"
 
+OFFLINE_MANIFEST_PATH "./offline.appcache"
+
 LANG "en"
 LOCALE "en_US"
 
@@ -26,9 +28,8 @@ SITEMAP_URL "/sitemap.xml"
 
 -->
 
-<html lang="{{ LANG }}">
+<html lang="{{ LANG }}" manifest="{{ OFFLINE_MANIFEST_PATH }}">
 <head>
-
 	<meta charset="utf-8" />
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
