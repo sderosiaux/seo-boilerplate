@@ -11,5 +11,11 @@
 - Really Simple Discovery
 - WindowsLiveWriter
 - OpenSearch
-- DNS Prefetch
 - JSON-LD
+
+- DNS Prefetch
+- DNS+Handshake+TLS Preconnect
+- Resource Prefetch (low priority)
+- Subresource (high priority)
+- Prerendering page 
+
