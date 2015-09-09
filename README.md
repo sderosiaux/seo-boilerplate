@@ -12,7 +12,6 @@
 - WindowsLiveWriter
 - OpenSearch
 - JSON-LD
-
 - DNS Prefetch
 - DNS+Handshake+TLS Preconnect
 - Resource Prefetch (low priority)
