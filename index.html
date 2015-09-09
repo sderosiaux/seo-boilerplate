@@ -50,10 +50,29 @@ SITEMAP_URL "/sitemap.xml"
 	<link rel="author" href="{{ GOOGLE_AUTHOR }}"/>
 	<link rel="sitemap" type="application/xml" title="Sitemap" href="{{ SITEMAP_URL }}" />
 
+	<!-- Resolve DNS asap (can be useful for future pages) -->
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//themes.googleusercontent.com">
+	<!-- Better: DNS + TCP handshake + optional TLS negotiation -->
+	<!-- Use for current page -->
+	<link rel="preconnect" href="//fonts.googleapis.com">
+	
+	<!-- Download a resource right now (into cache) if we know it's going to be used later -->
+	<!-- (can be useful for future pages) -->
+	<link rel="prefetch" href="image.png">
+	
+	<!-- Download directly (high priority, whereas prefetch is low priority)
+	     a resource that will be discovered later in the page (such as <script> at the end) -->
+	<link rel="subresource" href="app.js">
+	
+	<!-- Fetch the whole content of another page (css, process js etc.) -->
+	<!-- Useful when you know that the user will click on it for sure -->
+	<!-- It will take only a instant (everything will be already loaded!) -->
+	<link rel="prerender" href="http://example.com/about">
+	
+	<!-- always nice to use dns-prefetch or preconnect before, for stylesheets that are using those urls -->
+	<!-- eg: <link ref="preconnect" href="//fonts.gstatic.com"> -->
 	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300">
-	<!-- => prefetch before les styles qui utilise ces urls -->
 
 	<link rel="profile" href="http://gmpg.org/xfn/11" /> <!-- ?? -->
 
